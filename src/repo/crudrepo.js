@@ -4,6 +4,7 @@ class Crudrepo {
         this.document=document
     }
     async create(data){
+        
         try {
             const response = await this.document.create(data);
             return response

@@ -1,3 +1,6 @@
 module.exports={
-    tweetservice:require('./tweetservice')
+    tweetservice:require('./tweetservice'),
+    hastagservice:require('./hastagservice'),
+    likesservice:require('./likeservice'),
+    userservice:require('./user_service')
 }

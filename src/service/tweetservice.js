@@ -8,9 +8,10 @@ async function createatweet(data){
         throw error
     }
 }
-async function getAlltweet(){
+async function gettweetbyid(data){
     try {
-        const tweet = await tweetservice.getAll();
+        console.log(data);
+        const tweet = await tweetservice.getbyid(data.id);
         return tweet;
     } catch (error) {
         throw error
@@ -18,5 +19,5 @@ async function getAlltweet(){
 }
 module.exports={
     createatweet,
-    getAlltweet
+    gettweetbyid
 }

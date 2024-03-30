@@ -17,9 +17,11 @@ async function createatweetcontroller(req,res){
         throw error
     }
 }
-async function getAlltweetcontroller(req,res){
+async function gettweetcontrollerbyid(req,res){
     try {
-        const tweet = await tweetservice.getAlltweet()
+        const tweet = await tweetservice.gettweetbyid({
+            id:req.params.id
+        })
         return res.json({
             data:tweet
         })
@@ -29,5 +31,5 @@ async function getAlltweetcontroller(req,res){
 }
 module.exports={
     createatweetcontroller,
-    getAlltweetcontroller
+    gettweetcontrollerbyid
 }
