@@ -6,7 +6,7 @@ async function createatweetcontroller(req,res){
     try {
         const tweet = await tweetservice.createatweet({
             content:req.body.content,
-            likes:req.body.likes,
+            // likes:req.body.likes,
             noofretweets:req.body.noofretweets,
             user:req.body.user
         })

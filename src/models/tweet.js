@@ -3,15 +3,18 @@ const TweetSchema = mongoose.Schema({
     content:{
         type:String
     },
-    likes:{
-        type:Number
-    },
+    Likes:[{
+        type:mongoose.Schema.Types.ObjectId
+    }],
     noofretweets:{
         type:Number
     },
     user:{
-        type:String
-    }
+        type:mongoose.Schema.Types.ObjectId
+    },
+    Comment:[{
+        type:mongoose.Schema.Types.ObjectId
+    }]
 
 })
 const Tweet = mongoose.model('tweets',TweetSchema);

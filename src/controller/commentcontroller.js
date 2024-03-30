@@ -1,11 +1,11 @@
-const { likesservice } = require("../service/index");
+const { commentservice } = require("../service/index");
 
-async function createlikescontroller(req,res){
+async function createcommentcontroller(req,res){
    
     try {
         
         
-        const likes = await likesservice.createlikes({
+        const comment = await commentservice.updatecomment({
             
             tweet:req.query.tweet,
             user:req.query.user,
@@ -13,12 +13,12 @@ async function createlikescontroller(req,res){
 
         })
         return res.json({
-            data:likes
+            data:comment
         })
     } catch (error) {
         throw error
     }
 }
 module.exports={
-    createlikescontroller
+    createcommentcontroller
 }

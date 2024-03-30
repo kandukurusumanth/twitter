@@ -3,5 +3,6 @@ module.exports={
     tweetcontroller:require('./tweetcontroller'),
     hastagcontroller:require('./hastagcontroller'),
     likescontroller:require('./likescontroller'),
-    usercontroller:require('./usercontroller')
+    usercontroller:require('./usercontroller'),
+    commentcontrolller:require('./commentcontroller')
 }

@@ -24,6 +24,7 @@ class Crudrepo {
     async getbyid(id){
         try {
             const response = await this.document.findById(id);
+            
             return response
         } catch (error) {
             throw error

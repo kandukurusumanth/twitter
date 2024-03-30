@@ -10,8 +10,9 @@ async function createatweet(data){
 }
 async function gettweetbyid(data){
     try {
-        console.log(data);
+        
         const tweet = await tweetservice.getbyid(data.id);
+        
         return tweet;
     } catch (error) {
         throw error
